@@ -306,7 +306,7 @@
       random_station_table_data = [];
       random_patient_table_data = [];
       Array(12).fill().forEach((_, i) => {
-        case_time = getTime(0,Math.floor(Math.random()*(10-5+1))+5,Math.floor(Math.random()*(30-0+1))+0,Math.floor(Math.random()*(24-0+1))+0,Math.floor(Math.random()*(60-0+1))+0,Math.floor(Math.random()*(60-0+1))+0);
+        case_time = getTime(0,Math.floor(Math.random()*(8-2+1))+5,Math.floor(Math.random()*(10-0+1))+0,Math.floor(Math.random()*(24-0+1))+0,Math.floor(Math.random()*(60-0+1))+0,Math.floor(Math.random()*(60-0+1))+0);
         random_case_table_data.push({
           o:"",
           case_id: 202300000+(i+1),
@@ -1535,9 +1535,9 @@
       var sel_countyget=[]
       var old_sel_countyget;
       var select_value=sel_county.value
-      for(let i=0;i<date_datalist.length;i++) {
-        if (sel_countyget.includes(date_datalist[i].case_county)==false & date_datalist[i].case_county!="") {
-          sel_countyget.push(date_datalist[i].case_county)
+      for(let i=0;i<random_case_table_data.length;i++) {
+        if (sel_countyget.includes(random_case_table_data[i].case_county)==false & random_case_table_data[i].case_county!="") {
+          sel_countyget.push(random_case_table_data[i].case_county)
         }
       }
       for (let i=0;i<county_order.length;i++)  {
